@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperZen</title>
+    <meta name="description"
+        content="Join our collaborative cooking community with recipes, events, and culinary education">
+    <!-- Favicon & Preloads -->
+    <link rel="icon" type="image/png" href="Brand Logos/HyperZenFavicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts & Libraries -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /*Hero Section*/
+       .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 5rem 10rem;
+            gap: 2rem;
+        }
+        
+         .main-text{
+            font-size: 2.5rem;
+            color: var(--white);
+        }
+
+        .explanation{
+            font-size: 2rem;
+            max-width: 700px;
+        }
+
+        .white-text{
+            color: var(--white);
+        }
+
+        .green-text{
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+            border-radius: var(--rounded) var(--rounded) 0 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container"
+            style="display: flex; align-items: center; justify-content: space-between; height: 100px; padding: 0 20px;">
+
+            <!-- Logo on the Left -->
+            <div>
+                <img src="Brand Logos/Logo.png" alt="HyperZen Logo" style="width: 235px; height: 47px; border-radius: 12px;">
+            </div>
+
+            <!-- Search Function -->
+            <div class="button-container">
+                <a href="index.html" class="button"><i class="fas fa-home"></i> Home</a>
+                <a href="about-us.html" class="button"><i class="fas fa-info-circle"></i> Our Story</a>
+                <a href="Recipes.html" class="button"><i class="fa-solid fa-file"></i> Docs</a>
+                <a href="events.html" class="sign-button"> Sign In</a>
+                <a href="membership.html" class="sign-button"> Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+          <div class="text-group">
+            <div class="main-text">
+              <h1><span class="white-text">Become <span class="green-text">Focused</span> Fast</span></h1>
+            </div>
+            <div class="explanation">
+              <h2><span class="white-text">With Hyper<span class="green-text">Zen</span>, You Can Find Your <span class="green-text">Focus</span> Faster</span></h2>
+            </div>
+          </div>
+          <img src="Images/Untitled design (5).png" alt="HyperZen App, Become Focused Faster" class="hero-img" style="width: 511.5px; height: 636.75px;">
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+        <div class="social-share" style="margin-top: 1.5rem;">
+            <p>Share with friends:</p>
+            <a href="http://facebook.com/" aria-label="Share on Facebook"
+                style="color: var(--white); margin: 0 10px; font-size: 1.5rem;"><i
+                    class="fab fa-facebook"></i></a>
+            <a href="http://x.com/" aria-label="Share on x"
+                style="color: var(--white); margin: 0 10px; font-size: 1.5rem;"><i
+                    class="fab fa-x-twitter"></i></a>
+            <a href="http://instagram.com/" aria-label="Share on Instagram"
+                style="color: var(--white); margin: 0 10px; font-size: 1.5rem;"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+        </div>
+    </footer>
+
+    <script src="swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
