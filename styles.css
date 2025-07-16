@@ -59,11 +59,11 @@ h3 {
 .button {
     transition: all 0.3s ease;
     color: var(--white);
-    padding: 12px 24px;
+    padding: 6px 12px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    margin: 8px;
+    margin: 4px;
     font-size: 1rem;
 }
 
