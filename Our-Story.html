@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +15,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="swiper-bundle.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="hyperzen.css">
     <style>
-        /*Hero Section*/
-        .hero {
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .left-img {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
@@ -25,26 +29,34 @@
             margin: 5rem 10rem;
             gap: 2rem;
         }
-        
-         .main-text{
+
+        .right-img {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem 10rem;
+            gap: 2rem;
+        }
+
+        .main-text {
             font-size: 2.28rem;
             color: var(--white);
         }
 
-        .explanation{
+        .explanation {
             font-size: 2rem;
             max-width: 700px;
         }
 
-        .text-group {
-            margin-left: 12rem;
+        .text-left {
+            margin-left: 15rem;
         }
-        
-        .white-text{
+
+        .white-text {
             color: var(--white);
         }
 
-        .green-text{
+        .green-text {
             color: var(--primary-color);
         }
 
@@ -57,13 +69,13 @@
             margin-top: 3rem;
             border-radius: var(--rounded) var(--rounded) 0 0;
         }
-
     </style>
 </head>
 
 <body>
     <header>
-        <div class="container" style="display: flex; align-items: center; justify-content: space-between; height: 100px; padding: 0 20px;">
+        <div class="container"
+            style="display: flex; align-items: center; justify-content: space-between; height: 100px; padding: 0 20px;">
 
             <!-- Logo on the Left -->
             <div>
@@ -82,34 +94,56 @@
     </header>
 
     <main>
-        <div class="hero">
-          <div class="text-group">
-            <div class="main-text">
-              <h1><span class="white-text">Our <span class="green-text">Story</span></h1>
+        <div class="left-img">
+            <div class="text-left">
+                <div class="main-text">
+                    <h1><span class="white-text">Our <span class="green-text">Story</span></h1>
+                </div>
+                <div class="explanation">
+                    <h2><span class="white-text">Not All<span class="green-text"> Stories</span> Have <span
+                                class="green-text">Grand</span> Beginnings</span></h2>
+                    <a href="#beginning" class="sign-button"> Learn More</a>
+                </div>
             </div>
-            <div class="explanation">
-              <h2><span class="white-text">Not All<span class="green-text"> Stories</span> Have <span class="green-text">Grand</span> Beginnings</span></h2>
-              <a href="#hello.html" class="sign-button"> Learn More</a>
-            </div>
-          </div>
-          <img src="Images/Add a heading.png" alt="HyperZen App, Become Focused Faster" class="hero-img" style="">
+            <img src="Images/Untitled design (5).png" alt="HyperZen App, Become Focused Faster" class="hero-img" style="width: 30vw; height: 70vh;">
         </div>
-    </main>
 
+        <section id="beginning">
+            <div class="right-img">
+                <div class="text-group">
+                    <div class="explanation">
+                        <h2><span class="white-text">The<span class="green-text"> Beginning</span> Of It All</span></h2>
+                        <h3><span class="white-text">yapay ayopefijoefi ejrioej orgk my n amen ognto gnrioirorito uf k odirgkjm oritmg rotignoesn uoeinf oeifhvn ufogk enogufvknjgkf gguck giofjgijrogj dfmcufkgjnfkgugfgoie fjei fjijidjf ijfidjfidjfifijdfjdi fjd fiji jefoi vfjukchfku</span></h3>
+                        <a href="#learning" class="sign-button"> Next</a>
+                    </div>
+                </div>
+                <img src="Images/Untitled design (5).png" alt="HyperZen App, Become Focused Faster" class="hero-img" style="width: 30vw; height: 70vh;">
+            </div>
+        </section>   
+        
+        <section id="learning">
+            <div class="left-img">
+                <div class="text-left">
+                    <div class="explanation">
+                        <h2><span class="white-text">"How<span class="green-text"> To</span> Create An App"</span></h2>
+                        <a href="#beginning" class="sign-button"> Next</a>
+                    </div>
+                </div>
+                <img src="Images/Untitled design (5).png" alt="HyperZen App, Become Focused Faster" class="hero-img" style="width: 30vw; height: 70vh;">
+            </div>
+        </section>   
+    </main>    
     <footer>
         <div class="container">
-        <div class="social-share" style="margin-top: 1.5rem;">
-            <p>Share with friends:</p>
-            <a href="http://facebook.com/" aria-label="Share on Facebook"
-                style="color: var(--white); margin: 0 10px; font-size: 1.5rem;"><i
-                    class="fab fa-facebook"></i></a>
-            <a href="http://x.com/" aria-label="Share on x"
-                style="color: var(--white); margin: 0 10px; font-size: 1.5rem;"><i
-                    class="fab fa-x-twitter"></i></a>
-            <a href="http://instagram.com/" aria-label="Share on Instagram"
-                style="color: var(--white); margin: 0 10px; font-size: 1.5rem;"><i
-                    class="fab fa-instagram"></i></a>
-        </div>
+            <div class="social-share" style="margin-top: 1.5rem;">
+                <p>Share with friends:</p>
+                <a href="http://facebook.com/" aria-label="Share on Facebook"
+                    style="color: var(--white); margin: 0 10px; font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                <a href="http://x.com/" aria-label="Share on x"
+                    style="color: var(--white); margin: 0 10px; font-size: 1.5rem;"><i class="fab fa-x-twitter"></i></a>
+                <a href="http://instagram.com/" aria-label="Share on Instagram"
+                    style="color: var(--white); margin: 0 10px; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </footer>
 
