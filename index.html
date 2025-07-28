@@ -157,8 +157,8 @@
                 <a href="index.html" class="button"><i class="fas fa-home"></i> Home</a>
                 <a href="Our-Story.html" class="button"><i class="fa-solid fa-user"></i> Our Story</a>
                 <a href="Docs.html" class="button"><i class="fa-solid fa-file"></i> Docs</a>
-                <a onclick="openNewsletterForm()" class="sign-button"> Sign In</a>
-                <a onclick="openNewsletterForm()"class="sign-button"> Sign Up</a>
+                <a onclick="openSignIn()" class="sign-button"> Sign In</a>
+                <a onclick="openSignUp()"class="sign-button"> Sign Up</a>
             </div>
         </div>
     </header>
@@ -178,9 +178,9 @@
                 style="width: 30vw; height: 70vh;">
         </div>
 
-        <div id="popupOverlay" class="overlay-container">
+        <div id="signInOverlay" class="overlay-container">
             <div class="popup-box">
-                <button class="close-modal" onclick="openNewsletterForm()"><span class="green-text">&times;</span></button>
+                <button class="close-modal" onclick="openSignIn()"><span class="green-text">&times;</span></button>
                 <img src="Brand Logos/Logo.png" alt="HyperZen Logo" style="width: 235px; height: 47px; border-radius: 12px;">
                 <h1><span class="green-text">Sign In</span></h1>
                 <h3><span class="white-text">Sign Into Your HyperZen Account And Get Connected!</span></h3>
@@ -188,6 +188,22 @@
                     <input class="form-input" type="text" id="username" name="username" placeholder="Username" required>
                     <input class="form-input" type="text" id="password" name="password" placeholder="Password" required>
                     <button type="submit" class="submit-button" style="width: 100%;">Log In</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="signUpOverlay" class="overlay-container">
+            <div class="popup-box">
+                <button class="close-modal" onclick="openSignUp()"><span class="green-text">&times;</span></button>
+                <img src="Brand Logos/Logo.png" alt="HyperZen Logo" style="width: 235px; height: 47px; border-radius: 12px;">
+                <h1><span class="green-text">Sign Up</span></h1>
+                <h3><span class="white-text">Create Your HyperZen Account And Get Connected!</span></h3>
+                <form class="form-container" id="newsletterForm">
+                    <input class="form-input" type="text" id="name" name="name" placeholder="Name" required>
+                    <input class="form-input" type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                    <input class="form-input" type="text" id="username" name="username" placeholder="Username" required>
+                    <input class="form-input" type="text" id="password" name="password" placeholder="Password" required>
+                    <button type="submit" class="submit-button" style="width: 100%;">Sign Up</button>
                 </form>
             </div>
         </div>
@@ -219,8 +235,53 @@
 
         function enableScroll() { window.onscroll = function () { }; }
 
-        function openNewsletterForm() {
-            const overlay = document.getElementById('popupOverlay');
+        function openSignIn() {
+            const overlay = document.getElementById('signInOverlay');
+            overlay.classList.toggle('show');
+            if (overlay.classList.contains('show')) {
+                disableScroll();
+                overlay.style.display = 'flex';
+                setTimeout(() => overlay.style.opacity = '1', 10);
+            } else {
+                enableScroll();
+                overlay.style.opacity = '0';
+                setTimeout(() => overlay.style.display = 'none', 300);
+            }
+        }
+
+        // Form Submission
+        document.getElementById('newsletterForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('All Signed In');
+            openNewsletterForm();
+        });
+
+        // Close when clicking outside
+        document.getElementById('signInOverlay').addEventListener('click', function (e) {
+            if (e.target === this) {
+                openNewsletterForm();
+            }
+        });
+
+        // Close with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && document.getElementById('signInOverlay').classList.contains('show')) {
+                openNewsletterForm();
+            }
+        });
+
+
+        // Newsletter Form Functionality
+        function disableScroll() {
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+            window.onscroll = function () { window.scrollTo(scrollLeft, scrollTop); };
+        }
+
+        function enableScroll() { window.onscroll = function () { }; }
+
+        function openSignUp() {
+            const overlay = document.getElementById('signUpOverlay');
             overlay.classList.toggle('show');
             if (overlay.classList.contains('show')) {
                 disableScroll();
@@ -241,7 +302,7 @@
         });
 
         // Close when clicking outside
-        document.getElementById('popupOverlay').addEventListener('click', function (e) {
+        document.getElementById('signUpOverlay').addEventListener('click', function (e) {
             if (e.target === this) {
                 openNewsletterForm();
             }
@@ -249,11 +310,10 @@
 
         // Close with Escape key
         document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && document.getElementById('popupOverlay').classList.contains('show')) {
+            if (e.key === 'Escape' && document.getElementById('signUpOverlay').classList.contains('show')) {
                 openNewsletterForm();
             }
         });
-
     </script>
 </body>
 
